@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 const TestimonialsSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -25,8 +27,16 @@ const TestimonialsSection = () => {
     },
   ];
   
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 2 : prev - 1));
+  };
+  
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === testimonials.length - 2 ? 0 : prev + 1));
+  };
+  
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative bg-dashboard-card/50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative bg-dashboard-card/50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
@@ -38,45 +48,62 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className="dashboard-card p-8 rounded-xl animate-fade-in-up relative"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.stars)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                  ))}
-                  {[...Array(5 - testimonial.stars)].map((_, i) => (
-                    <Star key={i + testimonial.stars} className="w-5 h-5 text-gray-600" />
-                  ))}
-                </div>
-                <p className="text-white mb-6 italic">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full bg-dashboard-purple/30 flex items-center justify-center mr-4">
-                    <span className="text-lg font-bold text-dashboard-purple">
-                      {testimonial.name.charAt(0)}
-                    </span>
+          <div className="overflow-hidden">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out" 
+              style={{ transform: `translateX(-${activeIndex * 50}%)` }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <div 
+                  key={index} 
+                  className="w-full md:w-1/2 px-4 flex-shrink-0 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="dashboard-card p-8 rounded-xl relative h-full">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.stars)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                      ))}
+                      {[...Array(5 - testimonial.stars)].map((_, i) => (
+                        <Star key={i + testimonial.stars} className="w-5 h-5 text-gray-600" />
+                      ))}
+                    </div>
+                    <p className="text-white mb-6 italic">
+                      "{testimonial.quote}"
+                    </p>
+                    <div className="flex items-center mt-auto">
+                      <div className="h-12 w-12 rounded-full bg-dashboard-purple/30 flex items-center justify-center mr-4">
+                        <span className="text-lg font-bold text-dashboard-purple">
+                          {testimonial.name.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="font-bold">{testimonial.name}</h4>
+                        <p className="text-sm text-dashboard-text-muted">{testimonial.role}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold">{testimonial.name}</h4>
-                    <p className="text-sm text-dashboard-text-muted">{testimonial.role}</p>
-                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           
           <div className="flex justify-center mt-10">
             <div className="flex space-x-2">
-              <Button variant="outline" size="icon" className="rounded-full bg-dashboard-card border-white/10 hover:bg-white/10">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full bg-dashboard-card border-white/10 hover:bg-white/10"
+                onClick={handlePrev}
+              >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
-              <Button variant="outline" size="icon" className="rounded-full bg-dashboard-card border-white/10 hover:bg-white/10">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full bg-dashboard-card border-white/10 hover:bg-white/10"
+                onClick={handleNext}
+              >
                 <ChevronRight className="h-4 w-4" />
               </Button>
             </div>

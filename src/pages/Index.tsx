@@ -17,15 +17,18 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dashboard-bg bg-noise-texture">
+    <div className="min-h-screen bg-black bg-noise-texture">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent pointer-events-none z-0"></div>
       <Navbar />
-      <HeroSection />
-      <CompanyLogos />
-      <FeaturesSection />
-      <TestimonialsSection />
-      <PricingSection />
-      <FaqSection />
-      <CtaSection />
+      <main>
+        <HeroSection />
+        <CompanyLogos />
+        <FeaturesSection />
+        <TestimonialsSection />
+        <PricingSection />
+        <FaqSection />
+        <CtaSection />
+      </main>
       <Footer />
     </div>
   );
