@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="h-10 w-10 rounded-lg bg-dashboard-purple flex items-center justify-center mr-3">
+              <div className="h-10 w-10 rounded-full bg-dashboard-purple flex items-center justify-center mr-3">
                 <BarChart3 className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold">InsightFusion</span>

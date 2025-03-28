@@ -11,7 +11,7 @@ const CtaSection = () => {
       <div className="max-w-7xl mx-auto relative">
         <div className="bg-[#272829] bg-noise-texture p-12 md:p-16 text-center max-w-4xl mx-auto rounded-2xl   purple-glow animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6 text-white">
-            Ready to Transform <span className='text-dashboard-purple'>Your Sales Analytics?</span>
+            Ready to Transform Your <span className='text-dashboard-purple'>Sales Analytics?</span>
           </h2>
           <p className="text-lg text-dashboard-text-muted mb-8 max-w-2xl mx-auto">
             Join thousands of sales teams who have increased revenue and improved performance with our dashboard solution.

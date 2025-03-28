@@ -41,7 +41,7 @@ const FaqSection = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4 text-white">
-            Frequently <span className='text-dashboard-purple'>Asked Questions</span>
+            Frequently Asked <span className='text-dashboard-purple'> Questions</span>
           </h2>
           <p className="text-lg text-dashboard-text-muted max-w-3xl mx-auto">
             Find answers to common questions about our dashboard solution.

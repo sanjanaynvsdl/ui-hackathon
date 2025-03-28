@@ -51,8 +51,8 @@ const TestimonialsSection = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative  ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4 text-white">
-            Customer    <span className='text-dashboard-purple'> Success Stories</span>
+          <h2 className="text-4xl md:text-4xl font-bold gradient-text mb-4 text-white">
+            What Our <span className='text-dashboard-purple'>Customers Say</span>
           </h2>
           <p className="text-lg text-dashboard-text-muted max-w-3xl mx-auto">
             Discover how industry leaders are leveraging our dashboard to drive extraordinary results.

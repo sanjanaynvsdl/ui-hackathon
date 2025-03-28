@@ -59,7 +59,7 @@ const PricingSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4 text-white">
-            Simple, <span className='text-dashboard-purple'>Transparent Pricing</span>
+          Affordable Plans for  <span className='text-dashboard-purple'>Every Need🤍</span>
           </h2>
           <p className="text-lg text-dashboard-text-muted max-w-3xl mx-auto">
             Choose the plan that works for your team. All plans include a 14-day free trial.
@@ -75,7 +75,7 @@ const PricingSection = () => {
           </div> */}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+        <div className="mx-6 sm:mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 ">
           {plans.map((plan, index) => (
             <div 
               key={index} 
