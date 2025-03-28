@@ -18,7 +18,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black bg-noise-texture">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent pointer-events-none z-0"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent pointer-events-none z-0"></div> */}
       <Navbar />
       <main>
         <HeroSection />

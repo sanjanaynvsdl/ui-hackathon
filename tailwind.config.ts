@@ -72,6 +72,7 @@ export default {
 					'purple-dark': '#7C3AED',
 					'text': '#FFFFFF',
 					'text-muted': '#94A3B8',
+					
 				}
 			},
 			borderRadius: {

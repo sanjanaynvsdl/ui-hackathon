@@ -26,14 +26,12 @@ const CompanyLogos = () => {
   }, []);
   
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 relative bg-dashboard-card/50 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10 animate-fade-in">
-          <h2 className="text-2xl font-bold text-white mb-2">Trusted by Industry Leaders</h2>
-          <p className="text-dashboard-text-muted max-w-2xl mx-auto">
-            Join thousands of companies using our dashboard solution to optimize their sales performance.
-          </p>
-        </div>
+    <section className="py-5 px-4 lg:mx-40  md:mx-36 mx-0 rounded-xl sm:px-6 lg:px-8 relative ">
+      {/* <div className="max-w-7xl mx-auto"> */}
+        {/* <div className="text-center mb-4 animate-fade-in">
+          <h2 className="text-lg md:text-3xl md:text-white font-bold text-dashboard-purple">Trusted by Industry Leaders</h2>
+          
+        </div> */}
         
         <div className="relative overflow-hidden w-full">
           <div 
@@ -47,7 +45,7 @@ const CompanyLogos = () => {
                 key={`first-${index}`} 
                 className="h-12 flex-shrink-0 flex items-center justify-center transition-all hover:opacity-100 opacity-70"
               >
-                <div className="text-xl font-bold text-white/80 hover:text-dashboard-purple transition-colors">
+                <div className="md:text-3xl text-xl font-bold text-white/80 hover:text-dashboard-purple transition-colors">
                   {company}
                 </div>
               </div>
@@ -66,7 +64,7 @@ const CompanyLogos = () => {
             ))}
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };

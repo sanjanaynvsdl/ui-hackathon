@@ -58,30 +58,30 @@ const PricingSection = () => {
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
-            Simple, Transparent Pricing
+          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4 text-white">
+            Simple, <span className='text-dashboard-purple'>Transparent Pricing</span>
           </h2>
           <p className="text-lg text-dashboard-text-muted max-w-3xl mx-auto">
             Choose the plan that works for your team. All plans include a 14-day free trial.
           </p>
           
-          <div className="mt-8 inline-flex items-center bg-dashboard-card rounded-lg p-1">
+          {/* <div className="mt-8 inline-flex items-center bg-dashboard-card rounded-lg p-1">
             <button className="px-4 py-2 rounded-md bg-dashboard-purple text-white">
               Monthly
             </button>
             <button className="px-4 py-2 rounded-md text-dashboard-text-muted">
               Yearly (Save 20%)
             </button>
-          </div>
+          </div> */}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`dashboard-card p-8 rounded-xl animate-fade-in-up relative ${
+              className={`bg-[#272829] bg-noise-texture p-8 rounded-xl animate-fade-in-up relative ${
                 plan.popular ? 'border-dashboard-purple purple-glow' : ''
-              }`}
+              }`} 
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {plan.popular && (

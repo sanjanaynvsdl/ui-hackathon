@@ -40,8 +40,8 @@ const FaqSection = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
-            Frequently Asked Questions
+          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4 text-white">
+            Frequently <span className='text-dashboard-purple'>Asked Questions</span>
           </h2>
           <p className="text-lg text-dashboard-text-muted max-w-3xl mx-auto">
             Find answers to common questions about our dashboard solution.
@@ -52,7 +52,7 @@ const FaqSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className={`dashboard-card overflow-hidden transition-all duration-300 animate-fade-in-up ${
+              className={`bg-[#272829] bg-noise-texture rounded-lg  overflow-hidden transition-all duration-300 animate-fade-in-up ${
                 expandedIndex === index ? 'purple-glow' : ''
               }`}
               style={{ animationDelay: `${index * 0.05}s` }}
@@ -64,7 +64,7 @@ const FaqSection = () => {
               >
                 <h3 className="text-lg font-medium">{faq.question}</h3>
                 <ChevronDown 
-                  className={`w-5 h-5 text-dashboard-purple transition-transform duration-200 ${
+                  className={`w-5 h-5 text-white transition-transform duration-200 ${
                     expandedIndex === index ? 'transform rotate-180' : ''
                   }`}
                 />

@@ -25,13 +25,13 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dashboard-bg/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-none  backdrop-blur-lg shadow-lg' : 'bg-none'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
-            <div className="h-10 w-10 rounded-lg bg-dashboard-purple flex items-center justify-center mr-3">
+            <div className="h-10 w-10 rounded-full bg-dashboard-purple flex items-center justify-center mr-3">
               <BarChart3 className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold">InsightFusion</span>
@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-dashboard-card/95 backdrop-blur-lg`}>
+      <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-noise-texture backdrop-blur-lg`}>
         <div className="px-4 pt-2 pb-6 space-y-2">
           <a href="#features" className="block py-3 text-white hover:text-dashboard-purple transition-colors">Features</a>
           <a href="#pricing" className="block py-3 text-white hover:text-dashboard-purple transition-colors">Pricing</a>

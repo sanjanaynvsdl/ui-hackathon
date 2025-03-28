@@ -3,7 +3,7 @@ import React from 'react';
 
 const DashboardPreview = () => {
   return (
-    <div className="dashboard-card w-full max-w-5xl mx-auto overflow-hidden">
+    <div className="dashboard-card w-full max-w-5xl mx-auto overflow-hidden md:px-24 py-6">
       <div className="flex flex-col">
         {/* Dashboard Header */}
         <div className="flex justify-between items-center p-4 border-b border-white/10">
@@ -53,8 +53,8 @@ const DashboardPreview = () => {
             <div className="dashboard-stat text-white mt-2">56.5</div>
             <div className="relative mt-2 flex justify-center items-center h-16">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full border-8 border-gray-700 relative">
-                  <div className="absolute inset-0 rounded-full border-8 border-dashboard-purple border-l-transparent border-r-transparent transform rotate-45"></div>
+                <div className="w-16 h-16 rounded-full border-8 border-gray-700 relative">
+                  <div className="absolute inset-0 rounded-full border-4  border-dashboard-purple border-l-transparent border-r-transparent transform rotate-45"></div>
                 </div>
                 <div className="absolute text-lg font-bold">
                   198
@@ -68,8 +68,11 @@ const DashboardPreview = () => {
             <div className="dashboard-stat text-white mt-2">29%</div>
             <div className="relative mt-2 flex justify-center items-center h-16">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full border-8 border-gray-700 relative">
-                  <div className="absolute inset-0 rounded-full border-8 border-dashboard-purple border-t-transparent border-b-transparent transform rotate-45"></div>
+                <div className="w-16 h-16 rounded-full border-8 border-gray-700 relative">
+                  <div className="absolute inset-0 rounded-full border-4 border-dashboard-purple border-t-transparent border-b-transparent transform rotate-45"></div>
+                </div>
+                <div className="absolute text-lg font-bold">
+                  10
                 </div>
               </div>
             </div>
