@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, BarChart3 } from 'lucide-react';
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,12 +46,11 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-white/10 hover:bg-white/10">
-              Sign In
-            </Button>
-            <Button className="btn-primary">
-              Get Started
-            </Button>
+          <Link to="/dashboard">
+              <Button variant="default" className="bg-dashboard-purple hover:bg-dashboard-purple-dark text-white purple-glow">
+                Demo
+              </Button>
+            </Link>
           </div>
           
           <div className="md:hidden">
@@ -74,12 +74,14 @@ const Navbar = () => {
           <a href="#" className="block py-3 text-white hover:text-dashboard-purple transition-colors">FAQ</a>
           
           <div className="pt-3 space-y-3">
-            <Button variant="outline" className="w-full border-white/10 hover:bg-white/10">
-              Sign In
-            </Button>
-            <Button className="w-full btn-primary">
-              Get Started
-            </Button>
+            
+
+            <Link to="/dashboard">
+              <Button variant="default" className="bg-dashboard-purple hover:bg-dashboard-purple-dark text-white purple-glow">
+                Demo
+              </Button>
+            </Link>
+            
           </div>
         </div>
       </div>
