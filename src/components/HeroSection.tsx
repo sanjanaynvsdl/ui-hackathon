@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, Filter, Clock, Activity } from 'lucide-react';
 import DashboardPreview from './DashboardPreview';
+import {Link} from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -19,13 +20,16 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 mx-4 justify-center mt-8 md:mt-10">
-            <Button className="btn-primary group">
-              Book a Demo 
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/dashboard">
+                          <Button className="btn-primary group">
+                            Get Started Free
+                            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                          </Button>
+                        </Link>
             <Button variant="outline" className="btn-secondary">
-              View Features
+            <a href="#features" className="text-gray-300 hover:text-white transition-colors">View Features</a>
             </Button>
+
           </div>
         </div>
         
