@@ -12,7 +12,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="flex h-screen bg-black bg-noise-texture overflow-hidden">
+    <div className="flex h-screen bg-black  overflow-hidden">
       {/* Purple glow effect in background */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-dashboard-purple/20 rounded-full blur-[100px]"></div>
